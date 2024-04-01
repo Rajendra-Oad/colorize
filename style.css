@@ -137,22 +137,30 @@ ul li i {
     width: 50px;
     height: 50px;
     border-radius:8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--secondary-color);
+}
+.select-color .color:active{
+    opacity: 0.3;
     border: 1px solid var(--secondary-color);
 }
 
-@media screen and (max-width:576px){
-.box:hover {
-    box-shadow: none ;
-    transform: translate(0px, 0px);
-}
-
-.box:hover .price-container {
-    background-color: none;
-    color: var(--primary-color);
-}
-
-.box:hover button {
-    background-color: none;
-    color: var(--primary-color);
-}
+@media screen and (max-width: 576px) {
+    .box:hover .price-container {
+        background: none;
+        color: var(--primary-color-color);
+    }
+    .box:hover {
+        box-shadow: none;
+        transform: translate(0px,0px);
+    }
+    
+    .box:hover button {
+        background: none;
+        color: var(--primary-color);
+    }
+    .box button:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
 }
