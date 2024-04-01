@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Programming</title>
+    <title>Colorized</title>
+    <!-- fav-icons iconsheet -->
+    <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
+    <!-- customize stylesheet -->
     <link rel="stylesheet" href="./style.css">
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,10 +16,70 @@
 </head>
 
 <body>
+    <header>
+             <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand d-flex align-items-center me-auto" href="index.html"><img src="./images/fav-icon.png" alt="" width="40px" style="border-radius: 50%;"><h2>COLORIZED</h2></a>
+                  <div class="nav-item search">
+                    <a class="nav-link fw-medium d-flex d-lg-none" href="javascript:void(0)"><img src="./images/loupe.png" alt="" width="20px"></a>
+                  </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <a href="javascript:void(0)"><img src="./images/menu.png" alt="" width="35px"></a>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item d-none">
+                        <a class="nav-link fw-medium" aria-current="page" href="javascript:void(0)">Home</a>
+                      </li>
+                      <li class="nav-item dropdown text-center">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="currenyConversion">
+                            United States Dollar (USD)
+                        </a>
+                        <ul class="dropdown-menu me-auto currency-buttons" aria-labelledby="navbarDropdownMenuLink">
+                          <li><button class="dropdown-item btn rounded-pill" onclick="currency(1,'$','United States Dollar (USD)')">United States Dollar (USD)</button></li>
+                          <li><button class="dropdown-item btn rounded-pill" onclick="currency(82.50,'₹','Indian Rupee (INR)')">Indian Rupee (INR)</button></li>
+                          <li><button class="dropdown-item btn rounded-pill" onclick="currency(111.25,'¥','Japanese Yen (JPY)')">Japanese Yen (JPY)</button></li>
+                          <li><button class="dropdown-item btn rounded-pill" onclick="currency(125,'रु॰','Nepali Rupee (NPR)')">Nepali Rupee (NPR)</button></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown text-center">
+                        <a class="nav-link dropdown-toggle country" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://em-content.zobj.net/source/apple/391/flag-united-states_1f1fa-1f1f8.png" alt="" width="35px" class="me-1">
+                            <span id="currentCountryName">English</span>
+                        </a>
+                        <ul class="dropdown-menu me-auto" aria-labelledby="navbarDropdownMenuLink">
+                          <li><button class="dropdown-item btn rounded-pill d-flex align-items-center" onclick="switchToCountry('En','English')"><img src="https://em-content.zobj.net/source/apple/391/flag-united-states_1f1fa-1f1f8.png" alt="" width="35px" class="me-1">English</button></li>
+                          <li><button class="dropdown-item btn rounded-pill d-flex align-items-center" onclick="switchToCountry('Hi','हिन्दी')"><img src="https://em-content.zobj.net/source/apple/391/flag-india_1f1ee-1f1f3.png" alt="" width="35px" class="me-1">हिन्दी</button></li>
+                          <li><button class="dropdown-item btn rounded-pill d-flex align-items-center" onclick="switchToCountry('Np','नेपाली')"><img src="https://em-content.zobj.net/source/apple/391/flag-nepal_1f1f3-1f1f5.png" alt="" width="35px">नेपाली</button></li>
+                          <li><button class="dropdown-item btn rounded-pill d-flex align-items-center" onclick="switchToCountry('Sp','Español')"><img src="https://em-content.zobj.net/source/apple/391/flag-spain_1f1ea-1f1f8.png" alt="" width="35px" class="me-1">Español</butto></li>
+                          <li><button class="dropdown-item btn rounded-pill d-flex align-items-center" onclick="switchToCountry('Jp','Japanese')"><img src="https://em-content.zobj.net/source/apple/391/flag-japan_1f1ef-1f1f5.png" alt="" width="35px" class="me-1">Japanese</button></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item search d-none d-lg-flex">
+                        <a class="nav-link fw-medium" href="javascript:void(0)"><img src="./images/loupe.png" alt="" width="20px"></a>
+                      </li>
+                      <li class="nav-item cross-btn d-none ">
+                        <a class="nav-link fw-medium" href="javascript:void(0)"><img src="./images/cross-button.png" alt="" width="21px"></a>
+                      </li>
+                      <!-- <li class="nav-item search-box">
+                        <a class="nav-link fw-medium" href="javascript:void(0)"><input type="text" placeholder="Search "></a>
+                      </li> -->
+                      <li class="nav-item user text-center d-flex flex-column">
+                        <a class="nav-link fw-medium" href="javascript:void(0)"><img src="./images/person.png" alt="" width="35px"></a>
+                        <span class="d-flex d-lg-none">User Profile</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+    </header>
     <div class="container">
-        <header>
+        <heading>
             <h1 class="text-center pt-3 text-uppercase">Subscriptions</h1>
-        </header>
+        </heading>
         <hr class="hr mx-auto w-75">
         <div class="container">
             <div class="row d-flex gap-4 align-items-center justify-content-center">
@@ -27,7 +90,7 @@
                     </div>
                     <div class="content py-3">
                         <div class="price-container text-center py-4">
-                            <h1 class="d-inline">$0.99</h1><span>/lifetime</span>
+                            <h1 class="d-inline price" data-price="0.99">$0.99</h1><span>/lifetime</span>
                         </div>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i>Get strted with <b>messaging</b></li>
@@ -46,7 +109,7 @@
                     </div>
                     <div class="content py-3">
                         <div class="price-container text-center py-4">
-                            <h1 class="d-inline">$9.99</h1><span>/month</span>
+                            <h1 class="d-inline price" data-price="9.99">$9.99</h1><span>/month</span>
                         </div>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i>All features in <b>Basic</b></li>
@@ -65,7 +128,7 @@
                     </div>
                     <div class="content py-3">
                         <div class="price-container text-center py-4">
-                            <h1 class="d-inline">$24.99</h1><span>/month</span>
+                            <h1 class="d-inline price" data-price="24.99">$24.99</h1><span>/month</span>
                         </div>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i>All features in <b>Startup</b></li>
@@ -108,9 +171,26 @@
             </div>
         </div>
     </div>
-    <script src="./main.js"></script>
+    <footer>
+        <div class="container">
+            <div class="icons-pack">
+                <div class="icons">
+                    <a href="https://www.facebook.com/kabindra.bahabur" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/protycoon2x/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/rajendra-oad-320bb92b0/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@protycoonx9119" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-content d-flex align-items-center justify-content-center flex-column">
+                <p>©2021 Colorized | All Rights Reserved</p>
+                <p>Designed By ~ <span style="color: var(--main-theme);background-color: var(--primary-color);border-radius: 8px;padding: 0 5px;"><b>Rajendra Oad</b></span></p>
+            </div>
+        </div>
+    </footer>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
+    
 </body>
 
 </html>
