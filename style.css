@@ -167,7 +167,7 @@ ul li i {
         background: none;
         color: var(--primary-color);
     }
-    .box button:hover {
+    .box button:active {
         background-color: var(--primary-color);
         color: var(--secondary-color);
     }
