@@ -145,4 +145,14 @@ ul li i {
     box-shadow: none ;
     transform: translate(0px, 0px);
 }
+
+.box:hover .price-container {
+    background-color: none;
+    color: var(--primary-color);
+}
+
+.box:hover button {
+    background-color: none;
+    color: var(--primary-color);
+}
 }
