@@ -139,3 +139,10 @@ ul li i {
     border-radius:8px;
     border: 1px solid var(--secondary-color);
 }
+
+@media screen and (max-width:576px){
+.box:hover {
+    box-shadow: none ;
+    transform: translate(0px, 0px);
+}
+}
